@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,12 +62,34 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom app colors
+				app: {
+					soft: {
+						blue: '#E8F4FD',
+						green: '#E8F8F0',
+						purple: '#F0E8FF',
+						orange: '#FFF4E6',
+						pink: '#FFE8F0'
+					},
+					muted: {
+						blue: '#B8E0F5',
+						green: '#B8F0D1',
+						purple: '#D1B8FF',
+						orange: '#FFD6A3',
+						pink: '#FFB8D1'
+					}
 				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			fontSize: {
+				'2xl': ['1.75rem', { lineHeight: '2rem' }],
+				'3xl': ['2rem', { lineHeight: '2.25rem' }],
+				'4xl': ['2.5rem', { lineHeight: '2.75rem' }],
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +107,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'bounce-subtle': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+					},
+					'50%': {
+						transform: 'translateY(-2px)',
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out',
+				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite'
 			}
 		}
 	},
