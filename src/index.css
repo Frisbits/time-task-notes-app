@@ -3,41 +3,41 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Material 3 Design System */
+/* Material 3 Design System with Google Keep Inspired Colors */
 
 @layer base {
   :root {
-    /* Material 3 Light Theme */
-    --md-sys-color-primary: 103 80 164;
-    --md-sys-color-on-primary: 255 255 255;
-    --md-sys-color-primary-container: 234 221 255;
-    --md-sys-color-on-primary-container: 33 0 93;
+    /* Light Theme - Off-white and Google Keep inspired */
+    --md-sys-color-primary: 251 188 5; /* Google Keep yellow */
+    --md-sys-color-on-primary: 41 37 36; /* Dark text on yellow */
+    --md-sys-color-primary-container: 254 249 231; /* Light yellow container */
+    --md-sys-color-on-primary-container: 41 37 36; /* Dark text */
     
-    --md-sys-color-secondary: 98 91 113;
-    --md-sys-color-on-secondary: 255 255 255;
-    --md-sys-color-secondary-container: 232 222 248;
-    --md-sys-color-on-secondary-container: 29 25 43;
+    --md-sys-color-secondary: 76 175 80; /* Google Keep green */
+    --md-sys-color-on-secondary: 255 255 255; /* White text on green */
+    --md-sys-color-secondary-container: 232 245 233; /* Light green container */
+    --md-sys-color-on-secondary-container: 27 94 32; /* Dark green text */
     
-    --md-sys-color-tertiary: 125 82 96;
-    --md-sys-color-on-tertiary: 255 255 255;
-    --md-sys-color-tertiary-container: 255 216 228;
-    --md-sys-color-on-tertiary-container: 55 11 30;
+    --md-sys-color-tertiary: 255 112 67; /* Google Keep orange */
+    --md-sys-color-on-tertiary: 255 255 255; /* White text on orange */
+    --md-sys-color-tertiary-container: 255 243 238; /* Light orange container */
+    --md-sys-color-on-tertiary-container: 191 54 12; /* Dark orange text */
     
-    --md-sys-color-surface: 255 251 255;
-    --md-sys-color-on-surface: 28 27 31;
-    --md-sys-color-surface-variant: 231 224 236;
-    --md-sys-color-on-surface-variant: 73 69 78;
+    --md-sys-color-surface: 254 254 254; /* Off-white surface */
+    --md-sys-color-on-surface: 41 37 36; /* Dark text on surface */
+    --md-sys-color-surface-variant: 248 248 248; /* Light gray surface */
+    --md-sys-color-on-surface-variant: 73 69 78; /* Medium dark text */
     
-    --md-sys-color-background: 255 251 255;
-    --md-sys-color-on-background: 28 27 31;
+    --md-sys-color-background: 251 251 251; /* Off-white background */
+    --md-sys-color-on-background: 41 37 36; /* Dark text on background */
     
-    --md-sys-color-error: 179 38 30;
-    --md-sys-color-on-error: 255 255 255;
-    --md-sys-color-error-container: 249 222 220;
-    --md-sys-color-on-error-container: 65 14 11;
+    --md-sys-color-error: 211 47 47; /* Google Keep red */
+    --md-sys-color-on-error: 255 255 255; /* White text on red */
+    --md-sys-color-error-container: 254 242 242; /* Light red container */
+    --md-sys-color-on-error-container: 153 27 27; /* Dark red text */
     
-    --md-sys-color-outline: 121 116 126;
-    --md-sys-color-outline-variant: 202 196 208;
+    --md-sys-color-outline: 189 189 189; /* Light gray outline */
+    --md-sys-color-outline-variant: 229 229 229; /* Very light gray outline */
     
     /* Legacy mappings for compatibility */
     --background: var(--md-sys-color-background);
@@ -61,37 +61,37 @@
   }
 
   .dark {
-    /* Material 3 Dark Theme */
-    --md-sys-color-primary: 208 188 255;
-    --md-sys-color-on-primary: 54 21 118;
-    --md-sys-color-primary-container: 79 55 139;
-    --md-sys-color-on-primary-container: 234 221 255;
+    /* Dark Theme - Darker grays with Google Keep inspired accents */
+    --md-sys-color-primary: 255 213 79; /* Lighter yellow for dark mode */
+    --md-sys-color-on-primary: 23 23 23; /* Very dark text on yellow */
+    --md-sys-color-primary-container: 102 76 0; /* Dark yellow container */
+    --md-sys-color-on-primary-container: 255 213 79; /* Light yellow text */
     
-    --md-sys-color-secondary: 204 194 220;
-    --md-sys-color-on-secondary: 51 47 65;
-    --md-sys-color-secondary-container: 74 68 88;
-    --md-sys-color-on-secondary-container: 232 222 248;
+    --md-sys-color-secondary: 129 199 132; /* Lighter green for dark mode */
+    --md-sys-color-on-secondary: 23 23 23; /* Very dark text on green */
+    --md-sys-color-secondary-container: 27 94 32; /* Dark green container */
+    --md-sys-color-on-secondary-container: 129 199 132; /* Light green text */
     
-    --md-sys-color-tertiary: 227 187 199;
-    --md-sys-color-on-tertiary: 76 37 50;
-    --md-sys-color-tertiary-container: 101 58 73;
-    --md-sys-color-on-tertiary-container: 255 216 228;
+    --md-sys-color-tertiary: 255 171 145; /* Lighter orange for dark mode */
+    --md-sys-color-on-tertiary: 23 23 23; /* Very dark text on orange */
+    --md-sys-color-tertiary-container: 191 54 12; /* Dark orange container */
+    --md-sys-color-on-tertiary-container: 255 171 145; /* Light orange text */
     
-    --md-sys-color-surface: 16 16 20;
-    --md-sys-color-on-surface: 230 225 229;
-    --md-sys-color-surface-variant: 73 69 78;
-    --md-sys-color-on-surface-variant: 202 196 208;
+    --md-sys-color-surface: 33 33 33; /* Dark gray surface */
+    --md-sys-color-on-surface: 245 245 245; /* Light text on surface */
+    --md-sys-color-surface-variant: 48 48 48; /* Medium dark gray surface */
+    --md-sys-color-on-surface-variant: 202 196 208; /* Light gray text */
     
-    --md-sys-color-background: 16 16 20;
-    --md-sys-color-on-background: 230 225 229;
+    --md-sys-color-background: 18 18 18; /* Very dark background */
+    --md-sys-color-on-background: 245 245 245; /* Light text on background */
     
-    --md-sys-color-error: 242 184 181;
-    --md-sys-color-on-error: 105 37 34;
-    --md-sys-color-error-container: 147 0 10;
-    --md-sys-color-on-error-container: 249 222 220;
+    --md-sys-color-error: 255 138 128; /* Light red for dark mode */
+    --md-sys-color-on-error: 23 23 23; /* Very dark text on red */
+    --md-sys-color-error-container: 153 27 27; /* Dark red container */
+    --md-sys-color-on-error-container: 255 138 128; /* Light red text */
     
-    --md-sys-color-outline: 147 143 153;
-    --md-sys-color-outline-variant: 73 69 78;
+    --md-sys-color-outline: 97 97 97; /* Medium gray outline */
+    --md-sys-color-outline-variant: 68 68 68; /* Dark gray outline */
     
     /* Legacy mappings for compatibility */
     --background: var(--md-sys-color-background);
@@ -121,118 +121,140 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 16px;
     line-height: 1.6;
+    font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     touch-action: manipulation;
   }
 
-  /* Material 3 Typography Scale */
-  .md-display-large {
+  /* Typography Scale with Comfortaa weights */
+  .notey-display-large {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 57px;
     line-height: 64px;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: -0.25px;
   }
 
-  .md-display-medium {
+  .notey-display-medium {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 45px;
     line-height: 52px;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 0px;
   }
 
-  .md-display-small {
+  .notey-display-small {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 36px;
     line-height: 44px;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 0px;
   }
 
-  .md-headline-large {
+  .notey-headline-large {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 32px;
     line-height: 40px;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 0px;
   }
 
-  .md-headline-medium {
+  .notey-headline-medium {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 28px;
     line-height: 36px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0px;
   }
 
-  .md-headline-small {
+  .notey-headline-small {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 24px;
     line-height: 32px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0px;
   }
 
-  .md-title-large {
+  .notey-title-large {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 22px;
     line-height: 28px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0px;
   }
 
-  .md-title-medium {
+  .notey-title-medium {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
     letter-spacing: 0.15px;
   }
 
-  .md-title-small {
+  .notey-title-small {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 14px;
     line-height: 20px;
     font-weight: 500;
     letter-spacing: 0.1px;
   }
 
-  .md-body-large {
+  .notey-body-large {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;
     letter-spacing: 0.5px;
   }
 
-  .md-body-medium {
+  .notey-body-medium {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 14px;
     line-height: 20px;
     font-weight: 400;
     letter-spacing: 0.25px;
   }
 
-  .md-body-small {
+  .notey-body-small {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 12px;
     line-height: 16px;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 0.4px;
   }
 
-  .md-label-large {
+  .notey-label-large {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 14px;
     line-height: 20px;
     font-weight: 500;
     letter-spacing: 0.1px;
   }
 
-  .md-label-medium {
+  .notey-label-medium {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 12px;
     line-height: 16px;
     font-weight: 500;
     letter-spacing: 0.5px;
   }
 
-  .md-label-small {
+  .notey-label-small {
+    font-family: 'Comfortaa', sans-serif;
     font-size: 11px;
     line-height: 16px;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.5px;
+  }
+
+  /* App Title with Modulus font */
+  .app-title {
+    font-family: 'Modulus', serif;
+    font-weight: 600;
   }
 
   /* Mobile-specific optimizations */

@@ -25,10 +25,10 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, onViewChange, onCreateNot
   return (
     <div className="w-full md:w-80 bg-md-sys-color-surface border-r border-md-sys-color-outline-variant h-screen flex flex-col">
       <div className="p-6 border-b border-md-sys-color-outline-variant">
-        <h1 className="app-title md-headline-medium text-md-sys-color-on-surface mb-6">TaskNotes</h1>
+        <h1 className="app-title text-heading-xl text-md-sys-color-on-surface mb-6">Notey</h1>
         <Button 
           onClick={onCreateNote}
-          className="w-full md-fab md-label-large py-4 px-6 gap-3"
+          className="w-full md-fab notey-label-large py-4 px-6 gap-3"
         >
           <Plus className="h-6 w-6" />
           New Note
@@ -41,7 +41,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, onViewChange, onCreateNot
             <button
               key={item.id}
               onClick={() => onViewChange(item.id)}
-              className={`w-full flex items-center space-x-4 md-navigation-item md-label-large ${
+              className={`w-full flex items-center space-x-4 md-navigation-item notey-label-large ${
                 activeView === item.id
                   ? 'active bg-md-sys-color-secondary-container text-md-sys-color-on-secondary-container'
                   : 'text-md-sys-color-on-surface hover:bg-md-sys-color-surface-variant'
@@ -57,14 +57,14 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, onViewChange, onCreateNot
       <div className="p-4 border-t border-md-sys-color-outline-variant space-y-2">
         <button
           onClick={onLockApp}
-          className="w-full flex items-center space-x-4 md-navigation-item md-label-large text-md-sys-color-on-surface hover:bg-md-sys-color-surface-variant"
+          className="w-full flex items-center space-x-4 md-navigation-item notey-label-large text-md-sys-color-on-surface hover:bg-md-sys-color-surface-variant"
         >
           <Lock className="h-6 w-6" />
           <span>Lock App</span>
         </button>
         <button
           onClick={toggleTheme}
-          className="w-full flex items-center space-x-4 md-navigation-item md-label-large text-md-sys-color-on-surface hover:bg-md-sys-color-surface-variant"
+          className="w-full flex items-center space-x-4 md-navigation-item notey-label-large text-md-sys-color-on-surface hover:bg-md-sys-color-surface-variant"
         >
           {theme === 'light' ? (
             <Moon className="h-6 w-6" />

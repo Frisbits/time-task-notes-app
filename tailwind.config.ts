@@ -86,8 +86,18 @@ export default {
 				},
 			},
 			fontFamily: {
-				'sans': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-				'app-title': ['Crimson Text', 'serif'],
+				'sans': ['Comfortaa', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+				'app-title': ['Modulus', 'serif'],
+				'comfortaa': ['Comfortaa', 'sans-serif'],
+			},
+			fontSize: {
+				'heading-xl': ['32px', { lineHeight: '40px', fontWeight: '600' }],
+				'heading-lg': ['28px', { lineHeight: '36px', fontWeight: '500' }],
+				'heading-md': ['24px', { lineHeight: '32px', fontWeight: '500' }],
+				'heading-sm': ['22px', { lineHeight: '28px', fontWeight: '500' }],
+				'body-lg': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+				'body-md': ['14px', { lineHeight: '20px', fontWeight: '400' }],
+				'body-sm': ['12px', { lineHeight: '16px', fontWeight: '300' }],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
