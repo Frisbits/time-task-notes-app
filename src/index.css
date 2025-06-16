@@ -1,88 +1,116 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* Material 3 Design System */
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 30 41 59;
-
-    --card: 255 255 255;
-    --card-foreground: 30 41 59;
-
-    --popover: 255 255 255;
-    --popover-foreground: 30 41 59;
-
-    --primary: 99 102 241;
-    --primary-foreground: 248 250 252;
-
-    --secondary: 241 245 249;
-    --secondary-foreground: 51 65 85;
-
-    --muted: 248 250 252;
-    --muted-foreground: 100 116 139;
-
-    --accent: 236 254 255;
-    --accent-foreground: 22 78 99;
-
-    --destructive: 239 68 68;
-    --destructive-foreground: 248 250 252;
-
-    --border: 226 232 240;
-    --input: 226 232 240;
-    --ring: 99 102 241;
-
-    --radius: 0.75rem;
-
-    --sidebar-background: 255 255 255;
-    --sidebar-foreground: 71 85 105;
-    --sidebar-primary: 99 102 241;
-    --sidebar-primary-foreground: 248 250 252;
-    --sidebar-accent: 241 245 249;
-    --sidebar-accent-foreground: 51 65 85;
-    --sidebar-border: 226 232 240;
-    --sidebar-ring: 99 102 241;
+    /* Material 3 Light Theme */
+    --md-sys-color-primary: 103 80 164;
+    --md-sys-color-on-primary: 255 255 255;
+    --md-sys-color-primary-container: 234 221 255;
+    --md-sys-color-on-primary-container: 33 0 93;
+    
+    --md-sys-color-secondary: 98 91 113;
+    --md-sys-color-on-secondary: 255 255 255;
+    --md-sys-color-secondary-container: 232 222 248;
+    --md-sys-color-on-secondary-container: 29 25 43;
+    
+    --md-sys-color-tertiary: 125 82 96;
+    --md-sys-color-on-tertiary: 255 255 255;
+    --md-sys-color-tertiary-container: 255 216 228;
+    --md-sys-color-on-tertiary-container: 55 11 30;
+    
+    --md-sys-color-surface: 255 251 255;
+    --md-sys-color-on-surface: 28 27 31;
+    --md-sys-color-surface-variant: 231 224 236;
+    --md-sys-color-on-surface-variant: 73 69 78;
+    
+    --md-sys-color-background: 255 251 255;
+    --md-sys-color-on-background: 28 27 31;
+    
+    --md-sys-color-error: 179 38 30;
+    --md-sys-color-on-error: 255 255 255;
+    --md-sys-color-error-container: 249 222 220;
+    --md-sys-color-on-error-container: 65 14 11;
+    
+    --md-sys-color-outline: 121 116 126;
+    --md-sys-color-outline-variant: 202 196 208;
+    
+    /* Legacy mappings for compatibility */
+    --background: var(--md-sys-color-background);
+    --foreground: var(--md-sys-color-on-background);
+    --card: var(--md-sys-color-surface);
+    --card-foreground: var(--md-sys-color-on-surface);
+    --primary: var(--md-sys-color-primary);
+    --primary-foreground: var(--md-sys-color-on-primary);
+    --secondary: var(--md-sys-color-secondary-container);
+    --secondary-foreground: var(--md-sys-color-on-secondary-container);
+    --muted: var(--md-sys-color-surface-variant);
+    --muted-foreground: var(--md-sys-color-on-surface-variant);
+    --accent: var(--md-sys-color-tertiary-container);
+    --accent-foreground: var(--md-sys-color-on-tertiary-container);
+    --destructive: var(--md-sys-color-error);
+    --destructive-foreground: var(--md-sys-color-on-error);
+    --border: var(--md-sys-color-outline-variant);
+    --input: var(--md-sys-color-outline-variant);
+    --ring: var(--md-sys-color-primary);
+    --radius: 1rem;
   }
 
   .dark {
-    --background: 15 23 42;
-    --foreground: 226 232 240;
-
-    --card: 30 41 59;
-    --card-foreground: 226 232 240;
-
-    --popover: 30 41 59;
-    --popover-foreground: 226 232 240;
-
-    --primary: 129 140 248;
-    --primary-foreground: 15 23 42;
-
-    --secondary: 51 65 85;
-    --secondary-foreground: 226 232 240;
-
-    --muted: 51 65 85;
-    --muted-foreground: 148 163 184;
-
-    --accent: 30 58 138;
-    --accent-foreground: 226 232 240;
-
-    --destructive: 220 38 38;
-    --destructive-foreground: 226 232 240;
-
-    --border: 71 85 105;
-    --input: 71 85 105;
-    --ring: 129 140 248;
-
-    --sidebar-background: 30 41 59;
-    --sidebar-foreground: 203 213 225;
-    --sidebar-primary: 129 140 248;
-    --sidebar-primary-foreground: 15 23 42;
-    --sidebar-accent: 51 65 85;
-    --sidebar-accent-foreground: 226 232 240;
-    --sidebar-border: 71 85 105;
-    --sidebar-ring: 129 140 248;
+    /* Material 3 Dark Theme */
+    --md-sys-color-primary: 208 188 255;
+    --md-sys-color-on-primary: 54 21 118;
+    --md-sys-color-primary-container: 79 55 139;
+    --md-sys-color-on-primary-container: 234 221 255;
+    
+    --md-sys-color-secondary: 204 194 220;
+    --md-sys-color-on-secondary: 51 47 65;
+    --md-sys-color-secondary-container: 74 68 88;
+    --md-sys-color-on-secondary-container: 232 222 248;
+    
+    --md-sys-color-tertiary: 227 187 199;
+    --md-sys-color-on-tertiary: 76 37 50;
+    --md-sys-color-tertiary-container: 101 58 73;
+    --md-sys-color-on-tertiary-container: 255 216 228;
+    
+    --md-sys-color-surface: 16 16 20;
+    --md-sys-color-on-surface: 230 225 229;
+    --md-sys-color-surface-variant: 73 69 78;
+    --md-sys-color-on-surface-variant: 202 196 208;
+    
+    --md-sys-color-background: 16 16 20;
+    --md-sys-color-on-background: 230 225 229;
+    
+    --md-sys-color-error: 242 184 181;
+    --md-sys-color-on-error: 105 37 34;
+    --md-sys-color-error-container: 147 0 10;
+    --md-sys-color-on-error-container: 249 222 220;
+    
+    --md-sys-color-outline: 147 143 153;
+    --md-sys-color-outline-variant: 73 69 78;
+    
+    /* Legacy mappings for compatibility */
+    --background: var(--md-sys-color-background);
+    --foreground: var(--md-sys-color-on-background);
+    --card: var(--md-sys-color-surface);
+    --card-foreground: var(--md-sys-color-on-surface);
+    --primary: var(--md-sys-color-primary);
+    --primary-foreground: var(--md-sys-color-on-primary);
+    --secondary: var(--md-sys-color-secondary-container);
+    --secondary-foreground: var(--md-sys-color-on-secondary-container);
+    --muted: var(--md-sys-color-surface-variant);
+    --muted-foreground: var(--md-sys-color-on-surface-variant);
+    --accent: var(--md-sys-color-tertiary-container);
+    --accent-foreground: var(--md-sys-color-on-tertiary-container);
+    --destructive: var(--md-sys-color-error);
+    --destructive-foreground: var(--md-sys-color-on-error);
+    --border: var(--md-sys-color-outline-variant);
+    --input: var(--md-sys-color-outline-variant);
+    --ring: var(--md-sys-color-primary);
   }
 }
 
@@ -92,7 +120,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -100,8 +129,110 @@
     touch-action: manipulation;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold;
+  /* Material 3 Typography Scale */
+  .md-display-large {
+    font-size: 57px;
+    line-height: 64px;
+    font-weight: 400;
+    letter-spacing: -0.25px;
+  }
+
+  .md-display-medium {
+    font-size: 45px;
+    line-height: 52px;
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+
+  .md-display-small {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+
+  .md-headline-large {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+
+  .md-headline-medium {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+
+  .md-headline-small {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+
+  .md-title-large {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0px;
+  }
+
+  .md-title-medium {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+  }
+
+  .md-title-small {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+
+  .md-body-large {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+
+  .md-body-medium {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.25px;
+  }
+
+  .md-body-small {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+  }
+
+  .md-label-large {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+  }
+
+  .md-label-medium {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .md-label-small {
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
   }
 
   /* Mobile-specific optimizations */
@@ -114,28 +245,71 @@
 }
 
 @layer components {
-  .task-card {
-    @apply bg-card border border-border rounded-lg p-4 shadow-sm hover:shadow-md transition-all duration-200;
+  /* Material 3 Task Card */
+  .md-task-card {
+    @apply bg-card border border-border rounded-2xl p-6 shadow-sm;
+    transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
   }
   
-  .motivational-gradient {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  .md-task-card:hover {
+    @apply shadow-md;
+    transform: translateY(-1px);
   }
   
-  .dark .motivational-gradient {
-    background: linear-gradient(135deg, #4c63d2 0%, #5a4fcf 100%);
+  /* Material 3 FAB (Floating Action Button) */
+  .md-fab {
+    @apply bg-primary text-primary-foreground rounded-2xl shadow-lg;
+    transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+  }
+  
+  .md-fab:hover {
+    @apply shadow-xl;
+    transform: scale(1.05);
+  }
+
+  /* Material 3 Navigation */
+  .md-navigation-item {
+    @apply rounded-full px-4 py-3 transition-all duration-200;
+  }
+  
+  .md-navigation-item.active {
+    @apply bg-secondary text-secondary-foreground;
+  }
+  
+  .md-navigation-item:hover:not(.active) {
+    @apply bg-muted;
+  }
+
+  /* Material 3 Button styles */
+  .md-button-filled {
+    @apply bg-primary text-primary-foreground rounded-full px-6 py-3 font-medium;
+    transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+  }
+  
+  .md-button-filled:hover {
+    @apply shadow-md;
+    transform: translateY(-1px);
+  }
+
+  .md-button-outlined {
+    @apply border border-outline text-primary bg-transparent rounded-full px-6 py-3 font-medium;
+    transition: all 200ms cubic-bezier(0.2, 0, 0, 1);
+  }
+  
+  .md-button-outlined:hover {
+    @apply bg-primary/10;
   }
 
   /* Mobile touch targets */
   @media (max-width: 768px) {
-    .task-card {
-      @apply p-6;
-      min-height: 44px;
+    .md-task-card {
+      @apply p-4;
+      min-height: 56px;
     }
     
-    button {
-      min-height: 44px;
-      min-width: 44px;
+    button, .md-navigation-item {
+      min-height: 48px;
+      min-width: 48px;
     }
   }
 }

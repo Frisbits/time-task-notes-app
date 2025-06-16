@@ -15,61 +15,61 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, onViewChange, onCreateNot
   const { theme, toggleTheme } = useTheme();
 
   const menuItems = [
-    { id: 'today', label: 'Today', icon: Calendar, color: 'text-blue-600 dark:text-blue-400' },
-    { id: 'week', label: 'This Week', icon: Calendar, color: 'text-green-600 dark:text-green-400' },
-    { id: 'month', label: 'This Month', icon: Calendar, color: 'text-purple-600 dark:text-purple-400' },
-    { id: 'tasks', label: 'All Tasks', icon: CheckSquare, color: 'text-orange-600 dark:text-orange-400' },
-    { id: 'tables', label: 'Tables', icon: Table, color: 'text-pink-600 dark:text-pink-400' },
+    { id: 'today', label: 'Today', icon: Calendar, color: 'text-md-sys-color-primary' },
+    { id: 'week', label: 'This Week', icon: Calendar, color: 'text-md-sys-color-secondary' },
+    { id: 'month', label: 'This Month', icon: Calendar, color: 'text-md-sys-color-tertiary' },
+    { id: 'tasks', label: 'All Tasks', icon: CheckSquare, color: 'text-md-sys-color-primary' },
+    { id: 'tables', label: 'Tables', icon: Table, color: 'text-md-sys-color-secondary' },
   ];
 
   return (
-    <div className="w-full md:w-64 bg-card border-r border-border h-screen flex flex-col">
-      <div className="p-4 md:p-6 border-b border-border">
-        <h1 className="app-title text-2xl md:text-3xl font-bold text-foreground mb-4">TaskNotes</h1>
+    <div className="w-full md:w-80 bg-md-sys-color-surface border-r border-md-sys-color-outline-variant h-screen flex flex-col">
+      <div className="p-6 border-b border-md-sys-color-outline-variant">
+        <h1 className="app-title md-headline-medium text-md-sys-color-on-surface mb-6">TaskNotes</h1>
         <Button 
           onClick={onCreateNote}
-          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-base md:text-lg py-3"
+          className="w-full md-fab md-label-large py-4 px-6 gap-3"
         >
-          <Plus className="mr-2 h-5 w-5" />
+          <Plus className="h-6 w-6" />
           New Note
         </Button>
       </div>
 
-      <nav className="flex-1 p-3 md:p-4">
-        <div className="space-y-1 md:space-y-2">
+      <nav className="flex-1 p-4">
+        <div className="space-y-2">
           {menuItems.map((item) => (
             <button
               key={item.id}
               onClick={() => onViewChange(item.id)}
-              className={`w-full flex items-center space-x-3 px-3 md:px-4 py-3 rounded-lg text-left text-base md:text-lg transition-all duration-200 ${
+              className={`w-full flex items-center space-x-4 md-navigation-item md-label-large ${
                 activeView === item.id
-                  ? 'bg-accent text-accent-foreground shadow-sm'
-                  : 'hover:bg-muted text-muted-foreground hover:text-foreground'
+                  ? 'active bg-md-sys-color-secondary-container text-md-sys-color-on-secondary-container'
+                  : 'text-md-sys-color-on-surface hover:bg-md-sys-color-surface-variant'
               }`}
             >
-              <item.icon className={`h-5 w-5 ${item.color}`} />
+              <item.icon className={`h-6 w-6 ${item.color}`} />
               <span>{item.label}</span>
             </button>
           ))}
         </div>
       </nav>
 
-      <div className="p-3 md:p-4 border-t border-border space-y-2">
+      <div className="p-4 border-t border-md-sys-color-outline-variant space-y-2">
         <button
           onClick={onLockApp}
-          className="w-full flex items-center space-x-3 px-3 md:px-4 py-3 rounded-lg text-left text-base md:text-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+          className="w-full flex items-center space-x-4 md-navigation-item md-label-large text-md-sys-color-on-surface hover:bg-md-sys-color-surface-variant"
         >
-          <Lock className="h-5 w-5" />
+          <Lock className="h-6 w-6" />
           <span>Lock App</span>
         </button>
         <button
           onClick={toggleTheme}
-          className="w-full flex items-center space-x-3 px-3 md:px-4 py-3 rounded-lg text-left text-base md:text-lg hover:bg-muted text-muted-foreground hover:text-foreground transition-colors"
+          className="w-full flex items-center space-x-4 md-navigation-item md-label-large text-md-sys-color-on-surface hover:bg-md-sys-color-surface-variant"
         >
           {theme === 'light' ? (
-            <Moon className="h-5 w-5" />
+            <Moon className="h-6 w-6" />
           ) : (
-            <Sun className="h-5 w-5" />
+            <Sun className="h-6 w-6" />
           )}
           <span>{theme === 'light' ? 'Dark Mode' : 'Light Mode'}</span>
         </button>

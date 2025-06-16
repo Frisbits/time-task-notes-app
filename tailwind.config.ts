@@ -23,6 +23,34 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Material 3 System Colors
+				'md-sys-color': {
+					primary: 'hsl(var(--md-sys-color-primary))',
+					'on-primary': 'hsl(var(--md-sys-color-on-primary))',
+					'primary-container': 'hsl(var(--md-sys-color-primary-container))',
+					'on-primary-container': 'hsl(var(--md-sys-color-on-primary-container))',
+					secondary: 'hsl(var(--md-sys-color-secondary))',
+					'on-secondary': 'hsl(var(--md-sys-color-on-secondary))',
+					'secondary-container': 'hsl(var(--md-sys-color-secondary-container))',
+					'on-secondary-container': 'hsl(var(--md-sys-color-on-secondary-container))',
+					tertiary: 'hsl(var(--md-sys-color-tertiary))',
+					'on-tertiary': 'hsl(var(--md-sys-color-on-tertiary))',
+					'tertiary-container': 'hsl(var(--md-sys-color-tertiary-container))',
+					'on-tertiary-container': 'hsl(var(--md-sys-color-on-tertiary-container))',
+					surface: 'hsl(var(--md-sys-color-surface))',
+					'on-surface': 'hsl(var(--md-sys-color-on-surface))',
+					'surface-variant': 'hsl(var(--md-sys-color-surface-variant))',
+					'on-surface-variant': 'hsl(var(--md-sys-color-on-surface-variant))',
+					background: 'hsl(var(--md-sys-color-background))',
+					'on-background': 'hsl(var(--md-sys-color-on-background))',
+					error: 'hsl(var(--md-sys-color-error))',
+					'on-error': 'hsl(var(--md-sys-color-on-error))',
+					'error-container': 'hsl(var(--md-sys-color-error-container))',
+					'on-error-container': 'hsl(var(--md-sys-color-on-error-container))',
+					outline: 'hsl(var(--md-sys-color-outline))',
+					'outline-variant': 'hsl(var(--md-sys-color-outline-variant))',
+				},
+				// Legacy colors for compatibility
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -56,32 +84,6 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				},
-				app: {
-					soft: {
-						blue: '#E8F4FD',
-						green: '#E8F8F0',
-						purple: '#F0E8FF',
-						orange: '#FFF4E6',
-						pink: '#FFE8F0'
-					},
-					muted: {
-						blue: '#B8E0F5',
-						green: '#B8F0D1',
-						purple: '#D1B8FF',
-						orange: '#FFD6A3',
-						pink: '#FFB8D1'
-					}
-				}
 			},
 			fontFamily: {
 				'sans': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
@@ -92,16 +94,14 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-			fontSize: {
-				'xs': ['0.75rem', { lineHeight: '1rem' }],
-				'sm': ['0.875rem', { lineHeight: '1.25rem' }],
-				'base': ['1rem', { lineHeight: '1.5rem' }],
-				'lg': ['1.125rem', { lineHeight: '1.75rem' }],
-				'xl': ['1.25rem', { lineHeight: '1.75rem' }],
-				'2xl': ['1.5rem', { lineHeight: '2rem' }],
-				'3xl': ['1.875rem', { lineHeight: '2.25rem' }],
-				'4xl': ['2.25rem', { lineHeight: '2.5rem' }],
-				'5xl': ['3rem', { lineHeight: '1' }],
+			// Material 3 Motion
+			transitionTimingFunction: {
+				'emphasized': 'cubic-bezier(0.2, 0, 0, 1)',
+				'emphasized-decelerate': 'cubic-bezier(0.05, 0.7, 0.1, 1)',
+				'emphasized-accelerate': 'cubic-bezier(0.3, 0, 0.8, 0.15)',
+				'standard': 'cubic-bezier(0.2, 0, 0, 1)',
+				'standard-decelerate': 'cubic-bezier(0, 0, 0, 1)',
+				'standard-accelerate': 'cubic-bezier(0.3, 0, 1, 1)',
 			},
 			spacing: {
 				'safe-top': 'env(safe-area-inset-top)',
