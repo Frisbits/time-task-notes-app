@@ -1,0 +1,26 @@
+
+{
+  "name": "TaskNotes - Smart Task Management",
+  "short_name": "TaskNotes",
+  "description": "A beautiful and intuitive note-taking app focused on task management with time periods, motivation, and productivity features.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#6366f1",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/placeholder.svg",
+      "sizes": "390x844",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ]
+}
