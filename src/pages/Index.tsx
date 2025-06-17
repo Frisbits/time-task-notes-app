@@ -1,9 +1,11 @@
+
 import React, { useState, useEffect } from 'react';
 import Sidebar from '@/components/Sidebar';
 import TaskCard, { Task } from '@/components/TaskCard';
 import TaskModal from '@/components/TaskModal';
 import MotivationalQuote from '@/components/MotivationalQuote';
 import TableView from '@/components/TableView';
+import GymPlanView from '@/components/GymPlanView';
 import PinLock from '@/components/PinLock';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { useToast } from '@/hooks/use-toast';
@@ -138,6 +140,7 @@ const Index = () => {
       case 'week': return 'This Week\'s Tasks';
       case 'month': return 'This Month\'s Tasks';
       case 'tasks': return 'All Tasks';
+      case 'gym': return 'Gym Tracker';
       case 'tables': return 'Tables';
       default: return 'Tasks';
     }
@@ -164,7 +167,7 @@ const Index = () => {
       <div className="min-h-screen bg-background flex flex-col md:flex-row w-full">
         {/* Mobile Header */}
         <div className="md:hidden bg-card border-b border-border p-4 flex items-center justify-between">
-          <h1 className="app-title text-xl font-bold text-foreground">TaskNotes</h1>
+          <h1 className="app-title text-xl font-bold text-foreground">Notey</h1>
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
             className="p-2 hover:bg-muted rounded-lg transition-colors"
@@ -201,6 +204,8 @@ const Index = () => {
         <main className="flex-1 p-4 md:p-8 overflow-auto">
           {activeView === 'tables' ? (
             <TableView />
+          ) : activeView === 'gym' ? (
+            <GymPlanView />
           ) : (
             <>
               <div className="max-w-4xl mx-auto">

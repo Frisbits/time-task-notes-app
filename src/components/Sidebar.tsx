@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Calendar, CheckSquare, Table, Settings, Moon, Sun, Plus, Lock } from 'lucide-react';
+import { Calendar, CheckSquare, Table, Settings, Moon, Sun, Plus, Lock, Dumbbell } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import { Button } from '@/components/ui/button';
 
@@ -19,7 +19,8 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, onViewChange, onCreateNot
     { id: 'week', label: 'This Week', icon: Calendar, color: 'text-md-sys-color-secondary' },
     { id: 'month', label: 'This Month', icon: Calendar, color: 'text-md-sys-color-tertiary' },
     { id: 'tasks', label: 'All Tasks', icon: CheckSquare, color: 'text-md-sys-color-primary' },
-    { id: 'tables', label: 'Tables', icon: Table, color: 'text-md-sys-color-secondary' },
+    { id: 'gym', label: 'Gym Tracker', icon: Dumbbell, color: 'text-md-sys-color-secondary' },
+    { id: 'tables', label: 'Tables', icon: Table, color: 'text-md-sys-color-tertiary' },
   ];
 
   return (
